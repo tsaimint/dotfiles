@@ -1,0 +1,11 @@
+#exclude everything
+*
+#but not the following
+!.gitignore
+!eclimrc
+!gvimrc
+!README.md
+!tmux.conf
+!vim
+!vimrc
+!bundle/Vundle.vim
