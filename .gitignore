@@ -1,6 +1,7 @@
 #exclude everything
 *
 #but not the following
+!scripts/*
 !.gitignore
 !eclimrc
 !gvimrc
@@ -10,5 +11,4 @@
 !vimrc
 !bundle/Vundle.vim
 !init.sh
-!scripts/vm
 
