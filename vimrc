@@ -60,7 +60,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-colorscheme ir_black
+colorscheme bubblegum
 
 
 "Exit the edit mode.
@@ -75,6 +75,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set hls
 "set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set number
 set relativenumber
 
 "set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
@@ -87,5 +88,5 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'wombat'
-let g:tmuxline_preset = 'nightly_fox'
+"let g:airline_theme = 'murmur'
+let g:tmuxline_preset = 'tmux'
