@@ -31,8 +31,9 @@ Bundle 'vim-scripts/paredit.vim'
 "Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/vimshell.vim'
+"Bundle 'Shougo/vimproc.vim'
+"Bundle 'Shougo/vimshell.vim'
+Bundle 'vimux'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "	Plugin 'L9'
 " Git plugin not hosted on GitHub
