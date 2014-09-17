@@ -34,6 +34,7 @@ Bundle 'edkolev/tmuxline.vim'
 "Bundle 'Shougo/vimproc.vim'
 "Bundle 'Shougo/vimshell.vim'
 Bundle 'vimux'
+Bundle 'TagHighlight'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "	Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -60,7 +61,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-colorscheme bubblegum
+"colorscheme bubblegum
+colorscheme tango2
 
 
 "Exit the edit mode.
@@ -90,3 +92,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'murmur'
 let g:tmuxline_preset = 'tmux'
+hi Normal cterm=none
+
