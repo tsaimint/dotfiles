@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+set t_Co=256
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,27 +14,34 @@ Bundle 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Bundle 'tpope/vim-fugitive'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'guns/vim-clojure-highlight'
-Bundle 'tpope/vim-classpath'
-Bundle 'guns/vim-clojure-static'
-Bundle 'tpope/vim-projectionist'
-Bundle 'tpope/vim-dispatch'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-leiningen'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-sensible'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'vim-scripts/paredit.vim'
-"Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
+"Bundle 'guns/vim-clojure-highlight'
+"Bundle 'tpope/vim-classpath'
+"Bundle 'guns/vim-clojure-static'
+"Bundle 'tpope/vim-projectionist'
+"Bundle 'tpope/vim-dispatch'
+"Bundle 'kien/ctrlp.vim'
+"Bundle 'scrooloose/nerdtree'
+"Bundle 'tpope/vim-fireplace'
+"Bundle 'tpope/vim-leiningen'
+"Bundle 'airblade/vim-gitgutter'
+"Bundle 'tpope/vim-sensible'
+"Bundle 'kien/rainbow_parentheses.vim'
+"Bundle 'vim-scripts/paredit.vim'
+"Bundle 'bling/vim-airline'
+"Bundle 'edkolev/tmuxline.vim'
+"Bundle 'vimux'
+"Bundle 'TagHighlight'
+"-----------
+"Colorscheme
+"-----------
+Bundle 'sjl/badwolf'
+Bundle 'cocopon/iceberg.vim'
+Bundle 'baskerville/bubblegum'
+"------------------------------
+"Bundle 'flazz/vim-colorschemes'
 "Bundle 'Shougo/vimproc.vim'
 "Bundle 'Shougo/vimshell.vim'
-Bundle 'vimux'
-Bundle 'TagHighlight'
+"------------------------------
 " plugin from http://vim-scripts.org/vim/scripts.html
 "	Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -61,21 +68,19 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"colorscheme bubblegum
-colorscheme tango2
+syntax on
 
-
+colorscheme iceberg
+hi Normal ctermbg=none
 "Exit the edit mode.
 imap jk <ESC> 
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-n><C-n> :set invrelativenumber<CR>
-
-syntax on
+nmap <leader><t> :hi Normal ctermbg=none<CR>
 
 set tabstop=4 shiftwidth=4 expandtab
 set hls
-"set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set number
 set relativenumber
@@ -92,5 +97,3 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = 'murmur'
 let g:tmuxline_preset = 'tmux'
-hi Normal cterm=none
-
