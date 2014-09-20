@@ -13,30 +13,31 @@ Bundle 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Bundle 'guns/vim-clojure-highlight'
+Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fugitive'
-"Bundle 'guns/vim-clojure-highlight'
-"Bundle 'tpope/vim-classpath'
-"Bundle 'guns/vim-clojure-static'
-"Bundle 'tpope/vim-projectionist'
-"Bundle 'tpope/vim-dispatch'
-"Bundle 'kien/ctrlp.vim'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'tpope/vim-fireplace'
-"Bundle 'tpope/vim-leiningen'
-"Bundle 'airblade/vim-gitgutter'
-"Bundle 'tpope/vim-sensible'
-"Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'vim-scripts/paredit.vim'
-"Bundle 'bling/vim-airline'
-"Bundle 'edkolev/tmuxline.vim'
-"Bundle 'vimux'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-projectionist'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-leiningen'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'vim-scripts/paredit.vim'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'benmills/vimux'
 "Bundle 'TagHighlight'
 "-----------
 "Colorscheme
 "-----------
 Bundle 'sjl/badwolf'
-Bundle 'cocopon/iceberg.vim'
 Bundle 'baskerville/bubblegum'
+Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized.git'
 "------------------------------
 "Bundle 'flazz/vim-colorschemes'
 "Bundle 'Shougo/vimproc.vim'
@@ -68,16 +69,19 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-syntax on
 
-colorscheme iceberg
-hi Normal ctermbg=none
+syntax enable
+set background=dark
+colorscheme bubblegum
+"molokai
+"hi Normal ctermbg=none
+"hi NonText ctermbg=none
 "Exit the edit mode.
 imap jk <ESC> 
 
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-n><C-n> :set invrelativenumber<CR>
-nmap <leader><t> :hi Normal ctermbg=none<CR>
+nmap <leader>t :hi Normal ctermbg=none<CR> :hi NonText ctermbg=none<CR>
 
 set tabstop=4 shiftwidth=4 expandtab
 set hls
@@ -95,5 +99,5 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-"let g:airline_theme = 'murmur'
+let g:airline_theme = 'murmur'
 let g:tmuxline_preset = 'tmux'
