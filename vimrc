@@ -30,7 +30,12 @@ Bundle 'vim-scripts/paredit.vim'
 Bundle 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'benmills/vimux'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/vimshell.vim'
+Bundle 'sukima/xmledit'
+Bundle 'majutsushi/tagbar'
 "Bundle 'TagHighlight'
+
 "-----------
 "Colorscheme
 "-----------
@@ -40,8 +45,6 @@ Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized.git'
 "------------------------------
 "Bundle 'flazz/vim-colorschemes'
-"Bundle 'Shougo/vimproc.vim'
-"Bundle 'Shougo/vimshell.vim'
 "------------------------------
 " plugin from http://vim-scripts.org/vim/scripts.html
 "	Plugin 'L9'
@@ -74,8 +77,8 @@ syntax enable
 set background=dark
 colorscheme bubblegum
 "molokai
-"hi Normal ctermbg=none
-"hi NonText ctermbg=none
+hi Normal ctermbg=none
+hi NonText ctermbg=none
 "Exit the edit mode.
 imap jk <ESC> 
 
@@ -85,19 +88,21 @@ nmap <leader>t :hi Normal ctermbg=none<CR> :hi NonText ctermbg=none<CR>
 
 set tabstop=4 shiftwidth=4 expandtab
 set hls
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*/tmp/*,*/bin/*,*/target/*,*.so,*.swp,*.zip,*.class
 set number
 set relativenumber
 
-"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
-
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 "let g:ctrlp_custom_ignore = {    'dir':  '\v[\/]\.(git|hg|svn)$',    'file': '\v\.(exe|so|dll)$',    'link': 'some_bad_symbolic_links',    }
-
-"status line
-"set setatusline 
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
 let g:tmuxline_preset = 'tmux'
+
+"---------------------
+"------Folding--------
+"---------------------
+
+let g:xml_syntax_folding = 1
+"set foldmethod=syntax
