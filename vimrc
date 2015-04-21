@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set t_Co=256
-" set the runtime path to include Vundle and initialize
+" set the runtime path to include Vundle and initialize 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -28,6 +28,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'bling/vim-airline'
+"Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'benmills/vimux'
 Bundle 'Shougo/vimproc.vim'
@@ -43,6 +44,7 @@ Bundle 'sjl/badwolf'
 Bundle 'baskerville/bubblegum'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized.git'
+Bundle 'blueshirts/darcula.git'
 "------------------------------
 "Bundle 'flazz/vim-colorschemes'
 "------------------------------
@@ -74,8 +76,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax enable
-set background=dark
-colorscheme bubblegum
+"set background=dark
+colorscheme darcula
+"colorscheme solarized
 "molokai
 hi Normal ctermbg=none
 hi NonText ctermbg=none
@@ -97,7 +100,11 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux-statusline-colors.conf"
+
+
 let g:airline_theme = 'murmur'
+
 let g:tmuxline_preset = 'tmux'
 
 "---------------------
