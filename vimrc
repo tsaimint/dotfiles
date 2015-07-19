@@ -1,3 +1,6 @@
+"if has('nvim')
+"    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"endif
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set t_Co=256
