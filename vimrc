@@ -34,12 +34,12 @@ Bundle 'bling/vim-airline'
 "Bundle 'itchyny/lightline.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'benmills/vimux'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/vimshell.vim'
-Bundle 'sukima/xmledit'
-Bundle 'majutsushi/tagbar'
+"Bundle 'Shougo/vimproc.vim'
+"Bundle 'Shougo/vimshell.vim'
+"Bundle 'sukima/xmledit'
+"Bundle 'majutsushi/tagbar'
 "Bundle 'TagHighlight'
-
+Plugin 'vim-airline/vim-airline-themes'
 "-----------
 "Colorscheme
 "-----------
@@ -79,12 +79,13 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax enable
-"set background=dark
-colorscheme darcula
+set background=dark
+"colorscheme darcula
+"colorscheme bubblegum-256-dark
 "colorscheme solarized
-"molokai
-hi Normal ctermbg=none
-hi NonText ctermbg=none
+colorscheme molokai
+"hi Normal ctermbg=none
+"hi NonText ctermbg=none
 "Exit the edit mode.
 imap jk <ESC> 
 
@@ -109,6 +110,30 @@ let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux-statusline-colors.con
 let g:airline_theme = 'murmur'
 
 let g:tmuxline_preset = 'tmux'
+
+let g:rbpt_colorpairs = [ 
+            \ ['brown',       'RoyalBlue3'],
+            \ ['Darkblue',    'SeaGreen3'],
+            \ ['darkgray',    'DarkOrchid3'],
+            \ ['darkgreen',   'firebrick3'],
+            \ ['darkcyan',    'RoyalBlue3'],
+            \ ['darkred',     'SeaGreen3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['brown',       'firebrick3'],
+            \ ['gray',        'RoyalBlue3'],
+            \ ['green',       'SeaGreen3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['Darkblue',    'firebrick3'],
+            \ ['darkgreen',   'RoyalBlue3'],
+            \ ['darkcyan',    'SeaGreen3'],
+            \ ['darkred',     'DarkOrchid3'],
+            \ ['red',         'firebrick3'],
+            \ ]
+
+au VimEnter *.clj,*.cljs RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 "---------------------
 "------Folding--------
